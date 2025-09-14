@@ -7,3 +7,11 @@ class DenseLayer:
 
     def forward(self, inputs):
         self.outputs = np.dot(inputs, self.weights) + self.biases
+
+class ReLU:
+    def forward(self, inputs):
+        self.outputs = np.maximum(0, inputs)
+
+class Sigmoid:
+    def forward(self, inputs):
+        self.outputs = 1 / (1 + np.exp(-inputs))
